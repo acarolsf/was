@@ -22,7 +22,5 @@ INSERT INTO db_pweb.tb_usuario (login, senha, email) VALUES ('admin', '1234', 'c
 INSERT INTO db_pweb.tb_corretora (nome, cidade,telefone,email, cnpj) VALUES ('Corretora ImoveiSerido', 'Jardim do Serido', '49215678', 'jardimoveis@corretora.com',
  '321456766');
 
-drop table db_pweb.tb_usuario;
-
 select * from db_pweb.tb_corretora;
 select * from db_pweb.tb_usuario;
