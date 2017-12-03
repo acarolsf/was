@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ 
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:b="http://bootsfaces.net/ui"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+ 
+<h:head>
+</h:head>
+ 
+<ui:composition template="/template/layoutBase.xhtml">
+ 
+	<ui:define name="content">
+ 
+		<p:dialog header="Cadastro de Corretora" 
+				  id="dialog-modal-editar" 
+		   		  widgetVar="dialog-modal-editar" 
+		   		  modal="true" 
+		   		  height="400px"
+		   		  width="550px">
+ 
+    		 <ui:include src="cadastrarCorretora.xhtml"/>
+ 
+ 
+		</p:dialog>
+ 
+		<h:form style="margin:auto;margin-left:2%;" id="form-consulta">
+ 
+			<p:dataTable id="dataTable-registros"
+						 var="corretora" 
+						 value="#{consultarCorretoraController.corretora}" 
+						 rows="15"
+						 paginator="true"
+						 paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} 
+                                                 {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+                                                 rowsPerPageTemplate="5,10,15"
+                                                 style="width:98%;">
+ 
+				        <p:column headerText="Código">
+            				<h:outputText value="#{beancorretora.corretora.id_corretora}" />
+        				</p:column>
+ 
+        				<p:column headerText="Nome">
+            				<h:outputText value="#{beancorretora.corretora.nome}" />
+        				</p:column>
+ 
+        				<p:column headerText="Cidade" style="width:200px;">
+            				<h:outputText value="#{beancorretora.corretora.cidade}" />
+        				</p:column>
+
+        				 <p:column headerText="Email" style="width:200px;">
+            				<h:outputText value="#{beancorretora.corretora.email}" />
+        				 </p:column>
+ 
+        				 <p:column headerText="Telefone">
+            				<h:outputText value="#{beancorretora.corretora.telefone}" />
+        				 </p:column>
+ 
+        				 <p:column headerText="CNPJ">
+            				<h:outputText value="#{beancorretora.corretora.cnpj}" />
+        				 </p:column>
+ 
+    
+
+ 
+        				 <p:column headerText="" style="width:25px;">
+ 
+        				    <p:commandButton icon="ui-icon-trash" 
+        				    		     title="Excluir Corretora"                        					 
+                        					 ajax="true"
+                        					 actionListener="#{beancorretora.excluirCorretora(corretora)}"
+                        					 update="@form" />
+ 
+        				 </p:column>
+ 
+			</p:dataTable>
+ 
+		</h:form>
+ 
+	</ui:define>
+ 
+</ui:composition>
+</html>

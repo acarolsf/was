@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ 
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+ 
+	<h:head>
+ 
+		<h:outputStylesheet library="css" name="default.css"/>
+ 
+	</h:head>
+ 
+	<h:body style="display:flex;">
+ 
+ 
+		<h:form style=" margin:auto;">
+ 
+		    <p:growl id="growl-mensagem" showDetail="true" sticky="true" /> 
+ 
+		    <p:panel id="panel-login-principal" 
+		    		 header="Login" 
+		    		 footer="WAS" 
+		    		 style="width:400px;">
+ 
+	        	<h:panelGrid columns="2" cellpadding="10">
+ 
+	            	<p:graphicImage url="imagens/imobi.png" />
+ 
+	            	<h:panelGrid columns="2" cellpadding="5">
+			    		&nbsp;				 
+						<p:commandButton value="Consultar Corretoras" 
+	            				 id="commandButton-consCorr"
+						 icon="ui-icon-search"
+						 action="consultarCorretoras.xhtml"
+						 update="growl-mensagem" />
+						 
+						 <p:commandButton value="Consultar Usuarios" 
+	            				 id="commandButton-consUsu"
+						 icon="ui-icon-search"
+						 action="consultarUsuarios.xhtml"
+						 update="growl-mensagem" />
+						 
+						 <p:commandButton value="Cadastrar Corretoras" 
+	            				 id="commandButton-cadCorr"
+						 icon="ui-icon-gear"
+						 action="cadastrarCorretora.xhtml"
+						 update="growl-mensagem" />
+						 
+						 <p:commandButton value="Cadastrar Usuário" 
+	            				 id="commandButton-cadUsu"
+						 icon="ui-icon-gear"
+						 action="cadastrarUsuario.xhtml"
+						 update="growl-mensagem" />
+						 
+						 <p:commandButton value="Remover Corretora" 
+	            				 id="commandButton-remCorr"
+						 icon="ui-icon-trash"
+						 action="removerCorretora.xhtml"
+						 update="growl-mensagem" />
+						 
+						 <p:commandButton value="Remover Usuário" 
+	            				 id="commandButton-remUsu"
+						 icon="ui-icon-trash"
+						 action="RemoverUsuario.xhtml"
+						 update="growl-mensagem" />
+ 
+	            	</h:panelGrid>
+ 
+	            </h:panelGrid>
+ 
+	    	</p:panel>
+ 
+		</h:form>
+ 
+	</h:body>
+</html>	

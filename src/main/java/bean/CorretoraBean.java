@@ -59,10 +59,10 @@ public class CorretoraBean {
 	//listar Corretoraes
 	public String listarCorretora(){
 		getListCorretora();
-		return "testTable.xhtml";
+		return "consultarCorretoras.xhtml";
 	}
 	//excluir Corretora
-	public String excluirCorretora(){
+	public String excluirCorretora(Corretora corretora){
 
 		fachada.controler.excluirCorretora(corretora);
 		
@@ -71,16 +71,5 @@ public class CorretoraBean {
 		
 		return "principal.xhtml";
 	}
-	//prepara editação e redireciona pra pagina editar.xhtml
-	
-	public String preparaEdicao(Corretora corretora){
-		
-		this.corretora = corretora;
-		System.out.println(this.corretora.getId_corretora());
-		
-		
-		return "editarCorretora.xhtml";
-	}
-	
 
 }

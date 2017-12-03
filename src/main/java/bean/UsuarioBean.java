@@ -44,14 +44,14 @@ public class UsuarioBean {
 			usuario = new Usuario();
 			FacesContext menssagem = FacesContext.getCurrentInstance();
 			menssagem.addMessage(null, new FacesMessage("Usuario invalido"));
-			return "index";
+			return "index.xhtml";
 			
 		}else {
 			FacesContext fc = FacesContext.getCurrentInstance();
 			ExternalContext ec = fc.getExternalContext();
 			HttpSession session = (HttpSession) ec.getSession(false);
 			session.setAttribute("usuario", usuariook);
-			return "principal";
+			return "principal.xhtml";
 		}
 	
 	}
@@ -102,7 +102,7 @@ public Usuario usuarioExisteNoBanco(Usuario usuario) {
 		FacesContext menssagem = FacesContext.getCurrentInstance();
 		menssagem.addMessage(null, new FacesMessage("Usuario salvo com sucesso"));
 		
-		return "logar.xhtml";
+		return "principal.xhtml";
 	}
 	public void testausuario(){
 		System.out.println(usuario.getLogin());

@@ -29,6 +29,7 @@ public class ControladorCorretora implements CorretoraInterface {
 
 
 
+	@Override
 	public List<Corretora> listarCorretoras() {
 		return rp.listarCorretoras();
 	}

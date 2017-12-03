@@ -49,6 +49,7 @@ public class Controler implements InterfaceControlador{
 	public void cadastrarUsuario(Usuario usuario) {
 		controladorUsuario.cadastrarUsuario(usuario);		
 	}
+	@Override
 	public void excluirUsuario(Usuario usuario) {
 		
 		controladorUsuario.excluirUsuario(usuario);

@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ 
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+ 
+	<h:head>
+ 
+		<h:outputStylesheet library="css" name="default.css"/>
+ 
+	</h:head>
+ 
+	<h:body style="display:flex;">
+ 
+ 
+		<h:form style=" margin:auto;">
+ 
+		    <p:growl id="growl-mensagem" showDetail="true" sticky="true" /> 
+ 
+		    <p:panel id="panel-contato-principal" 
+		    		 header="Contato" 
+		    		 footer="WAS" 
+		    		 style="width:400px;">
+ 
+	        	<h:panelGrid columns="2" cellpadding="10">
+ 
+	            	<p:graphicImage url="imagens/imobi.png" />
+ 
+	            	<h:panelGrid columns="2" cellpadding="5">
+			    		&nbsp;
+	            		<h3>Carol</h3>
+						<b>Telefone:</b> 84 9 9993-8436<br />
+						<b>Email:</b> cscarol20@gmail.com 
+						<br />
+						<h3>Sergiany</h3>
+						<b>Telefone:</b> 84 9 9667-1712<br />
+						<b>Email:</b> sergiany@gmail.com 
+						<br />
+						<h3>Wesley</h3>
+						<b>Telefone:</b> 84 9 9993-9079<br />
+						<b>Email:</b> wesley.genio8@gmail.com 
+						<br />
+
+					
+				</h:panelGrid>
+					<p:commandButton value="Voltar" 
+	            				 id="commandButton-voltar"
+						 icon="ui-icon-arrowreturn-1-w"
+						 action="index.xhtml"
+						 update="growl-mensagem" />
+ 
+	            </h:panelGrid>
+ 
+	    	</p:panel>
+ 
+		</h:form>
+ 
+	</h:body>
+</html>
