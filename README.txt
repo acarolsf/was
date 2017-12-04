@@ -38,7 +38,7 @@ Establish the connection
 Looks like:
 
 Database: db_was
-URL: jdbc: mysql: // localhost: 3306 / db_was
+URL: jdbc:mysql://localhost:3306/db_was
 
 your username and password.
 (Recommended test connection)
