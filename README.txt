@@ -1,4 +1,4 @@
-Alunos: 
+Feito por: 
 Ana Carolina de Sousa Ferreira
 
 Para a conexão da base de dados, é necessário baixar o mysql-connector-java-5.1.45.zip anexado no projeto,
