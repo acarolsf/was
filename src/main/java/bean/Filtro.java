@@ -20,17 +20,14 @@ public class Filtro implements Filter {
 	
 	private EntityManagerFactory emf;
 	
-	@Override
 	public void init(FilterConfig filterConfig) throws ServletException {
 		this.emf = Persistence.createEntityManagerFactory("Mapeamento");
 	}
 	
-	@Override
 	public void destroy() {
 		this.emf.close();
 	}
 
-	@Override
 	public void doFilter(ServletRequest request, ServletResponse response,
 			FilterChain chain) throws IOException, ServletException {
 
