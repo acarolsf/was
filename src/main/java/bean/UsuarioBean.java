@@ -14,6 +14,7 @@ import javax.servlet.http.HttpSession;
 import fachada.Fachada;
 import bean.Usuario;
 
+@SuppressWarnings("deprecation")
 @ManagedBean(name="beanusuario")
 @SessionScoped
 public class UsuarioBean {

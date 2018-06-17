@@ -12,6 +12,7 @@ import bean.Corretora;
 
 
 
+@SuppressWarnings("deprecation")
 @ManagedBean(name="beancorretora")
 
 public class CorretoraBean {

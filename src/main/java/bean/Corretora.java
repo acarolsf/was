@@ -2,6 +2,7 @@ package bean;
 
 import javax.faces.bean.ManagedBean;
 
+@SuppressWarnings("deprecation")
 @ManagedBean (name= "corretora")
 public class Corretora {
 	private int id_corretora;

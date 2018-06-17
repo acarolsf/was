@@ -6,6 +6,7 @@ import javax.faces.context.FacesContext;
 
 import bean.Usuario;
 
+@SuppressWarnings("deprecation")
 @ManagedBean (name= "shit")
 public class Login {
 	
